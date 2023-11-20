@@ -1,18 +1,13 @@
 ---
-
+import Layout from '../layouts/Layout.astro'
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <div class="navbar mb-8 bg-base-300">
-      <a class="btn btn-ghost text-xl normal-case">nicholas weidmann</a>
-    </div>
-  </body>
-</html>
+<Layout title="Nicholas Weidmann">
+  <div class="h-16"></div>
+  <div class="">
+    <p class="" transition:name="title">Nicholas Weidmann</p>
+  </div>
+  <div class="">
+    <a class="btn btn-primary" href="projects" transition:name="btn">projects</a>
+  </div>
+</Layout>
