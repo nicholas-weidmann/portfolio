@@ -7,7 +7,8 @@ module.exports = {
   semi: false,
   bracketSpacing: true,
   trailingComma: 'all',
-  plugins: ['prettier-plugin-astro'],
+  plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
+  pluginSearchDirs: false,
   overrides: [
     {
       files: '*.astro',
