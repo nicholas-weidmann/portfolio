@@ -1,0 +1,1 @@
+- use theme controller: https://daisyui.com/components/theme-controller/
