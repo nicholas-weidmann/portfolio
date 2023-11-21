@@ -17,5 +17,18 @@ const { title } = Astro.props
   </head>
   <body>
     <slot />
+    <script>
+      import { navigate } from 'astro:transitions/client'
+      document.addEventListener(
+        'keyup',
+        (event) => {
+          if (event.key === 'Escape') navigate('/')
+          if (event.key === '1') navigate('/experience')
+          if (event.key === '2') navigate('/projects')
+          if (event.key === '3') navigate('/about')
+        },
+        false,
+      )
+    </script>
   </body>
 </html>
