@@ -1,15 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import ThemeController from '../components/theme-controller.astro'
 ---
 
 <Layout title="Nicholas Weidmann">
-  <div class="h-16"></div>
-  <div class="">
-    <p class="text-center text-4xl" transition:name="title">Nicholas Weidmann</p>
-  </div>
-  <div class="h-16"></div>
-  <div class="h-16"></div>
-  <div class="">
-    <a class="btn btn-primary h-40" href="/" transition:name="btn">home</a>
+  <div class="navbar bg-base-200">
+    <div class="flex flex-1 gap-8">
+      <a class="btn btn-ghost" href="/" transition:name="title">Nicholas Weidmann</a>
+      <a class="btn btn-neutral" href="/experience" transition:name="btn-experience">
+        <kbd class="kbd" data-theme="night">1</kbd>Experience
+      </a>
+      <a class="btn btn-primary" href="/projects" transition:name="btn-projects">
+        <kbd class="kbd" data-theme="night">2</kbd>Projects
+      </a>
+      <a class="btn btn-neutral" href="/about" transition:name="btn-about">
+        <kbd class="kbd" data-theme="night">3</kbd>About
+      </a>
+    </div>
+    <div class="skeleton h-12 w-12 flex-none rounded-full" data-theme="light" transition:name="profile"></div>
+    <ThemeController />
   </div>
 </Layout>

@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Nicholas Weidmann">
+  <div class="hero min-h-screen bg-base-100">
+    <div class="hero-content">
+      <div>
+        <h1 class="text-5xl font-bold" transition:name="title">404 Not Found</h1>
+        <p class="py-6"><kbd class="kbd">Path: {Astro.url.pathname}</kbd></p>
+        <a class="btn btn-neutral" href="/" transition:name="btn-home">Home</a>
+      </div>
+    </div>
+  </div>
+</Layout>

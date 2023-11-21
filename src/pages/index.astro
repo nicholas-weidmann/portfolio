@@ -1,13 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import ThemeController from '../components/theme-controller.astro'
 ---
 
 <Layout title="Nicholas Weidmann">
-  <div class="h-16"></div>
-  <div class="">
-    <p class="" transition:name="title">Nicholas Weidmann</p>
-  </div>
-  <div class="">
-    <a class="btn btn-primary" href="projects" transition:name="btn">projects</a>
+  <div class="hero min-h-screen bg-base-100">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+      <div class="skeleton h-64 w-64" data-theme="light" transition:name="profile"></div>
+      <div>
+        <h1 class="text-5xl font-bold" transition:name="title">Nicholas Weidmann</h1>
+        <p class="py-6">It's meee. And some text. And some thing about me.</p>
+        <a class="btn btn-neutral" href="/experience" transition:name="btn-experience">
+          <kbd class="kbd" data-theme="night">1</kbd>Experience
+        </a>
+        <a class="btn btn-neutral" href="/projects" transition:name="btn-projects">
+          <kbd class="kbd" data-theme="night">2</kbd>Projects
+        </a>
+        <a class="btn btn-neutral" href="/about" transition:name="btn-about">
+          <kbd class="kbd" data-theme="night">3</kbd>About
+        </a>
+        <ThemeController />
+      </div>
+    </div>
   </div>
 </Layout>
