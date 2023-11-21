@@ -1,1 +1,2 @@
 - use theme controller: https://daisyui.com/components/theme-controller/
+- use Open Graph protocol https://ogp.me/
