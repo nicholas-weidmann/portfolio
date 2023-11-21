@@ -2,3 +2,4 @@
 - use Open Graph protocol https://ogp.me/
 - rotate 3d with WASD
 - add a favicon
+- add "my eyes" gif when swtiching to light mode
