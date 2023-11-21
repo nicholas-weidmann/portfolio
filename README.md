@@ -41,3 +41,10 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 | `npm lint`                | Use ESLint to lint                               |
 | `npm format`              | Use prettier to format all files in src          |
+
+## 🌟 Inspirations
+
+### ▶️ YouTube
+
+- [Theo - The Coolest Websites I've Ever Seen](https://youtu.be/_mKUuTwmKSg)
+  - [Brittany Chiang - Portfolio](https://brittanychiang.com/)
