@@ -1,2 +1,4 @@
 - use theme controller: https://daisyui.com/components/theme-controller/
 - use Open Graph protocol https://ogp.me/
+- rotate 3d with WASD
+- add a favicon
