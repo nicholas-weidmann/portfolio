@@ -9,6 +9,20 @@ const { name } = Astro.params
 ---
 
 <NavbarLayout title="Nicholas Weidmann">
-  <div>Good dog, {name}!</div>
-  <img src="/images/mmocld-test_client.png" alt="mmocld test_client" transition:name="img-mmocld-test_client" />
+  <div class="px-8">
+    <img
+      class="w-5/6"
+      src="/images/mmocld-test_client.png"
+      alt="mmocld test_client"
+      transition:name="img-test_client"
+    />
+    <h1 class="text-4xl" transition:name="title-test_client">Test Client</h1>
+    <div class="badge badge-secondary" transition:name="group_tag-test_client">mmocld</div>
+    <p transition:name="short_desc-test_client">If a dog chews shoes whose shoes does he choose?</p>
+    <div class="card-actions justify-end font-semibold" transition:name="tech_tags-test_client">
+      <div class="badge badge-accent">Angular</div>
+      <div class="badge badge-primary">API</div>
+      <div class="badge badge-primary">OpenID Connect</div>
+    </div>
+  </div>
 </NavbarLayout>
