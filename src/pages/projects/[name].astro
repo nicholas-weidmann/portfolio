@@ -1,0 +1,14 @@
+---
+import NavbarLayout from '../../layouts/NavbarLayout.astro'
+
+export function getStaticPaths() {
+  return [{ params: { name: 'test_client' } }]
+}
+
+const { name } = Astro.params
+---
+
+<NavbarLayout title="Nicholas Weidmann">
+  <div>Good dog, {name}!</div>
+  <img src="/images/mmocld-test_client.png" alt="mmocld test_client" transition:name="img-mmocld-test_client" />
+</NavbarLayout>
