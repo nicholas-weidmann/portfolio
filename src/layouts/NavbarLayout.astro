@@ -2,34 +2,81 @@
 import BaseLayout from './BaseLayout.astro'
 import ThemeController from '../components/theme-controller.astro'
 
-function onPath(path: string) {
+function btnOnPath(path: string) {
   return Astro.url.pathname === path ? 'btn-primary' : 'btn-neutral'
 }
 ---
 
 <BaseLayout title="Nicholas Weidmann">
   <div class="mx-auto min-h-screen max-w-screen-xl">
-    <div class="navbar mt-8 rounded-box bg-base-300 shadow-xl">
-      <div class="flex flex-1 gap-8">
-        <a class="btn btn-ghost" href="/" transition:name="title">
-          <kbd class="kbd text-base-content">Esc</kbd>Nicholas Weidmann
-        </a>
-        <a class:list={['btn', onPath('/experience')]} href="/experience" transition:name="btn-experience">
-          <kbd class="kbd text-base-content">1</kbd>Experience
-        </a>
-        <a class:list={['btn', onPath('/projects')]} href="/projects" transition:name="btn-projects">
-          <kbd class="kbd text-base-content">2</kbd>Projects
-        </a>
-        <a class:list={['btn', onPath('/about')]} href="/about" transition:name="btn-about">
-          <kbd class="kbd text-base-content">3</kbd>About
-        </a>
+    <div class="drawer">
+      <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content flex flex-col">
+        <!-- Navbar -->
+        <div class="navbar rounded-box bg-base-300 shadow-xl md:mt-8">
+          <div class="flex-none md:hidden">
+            <label for="my-drawer" aria-label="open sidebar" class="btn btn-square btn-ghost">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="inline-block h-6 w-6 stroke-current"
+                ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"
+                ></path></svg
+              >
+            </label>
+          </div>
+          <div class="flex flex-1 gap-8">
+            <a class="btn btn-ghost" href="/" transition:name="title">
+              <kbd class="kbd text-base-content">Esc</kbd>Nicholas Weidmann
+            </a>
+            <a
+              class:list={['btn', btnOnPath('/experience'), 'max-md:hidden']}
+              href="/experience"
+              transition:name="btn-experience"
+            >
+              <kbd class="kbd text-base-content">1</kbd>Experience
+            </a>
+            <a
+              class:list={['btn', btnOnPath('/projects'), 'max-md:hidden']}
+              href="/projects"
+              transition:name="btn-projects"
+            >
+              <kbd class="kbd text-base-content">2</kbd>Projects
+            </a>
+            <a class:list={['btn', btnOnPath('/about'), 'max-md:hidden']} href="/about" transition:name="btn-about">
+              <kbd class="kbd text-base-content">3</kbd>About
+            </a>
+          </div>
+          <div class="skeleton h-12 w-12 flex-none rounded-full" data-theme="light" transition:name="profile"></div>
+          <ThemeController />
+        </div>
+        <!-- Page content here -->
+        <div class="mt-8 md:mt-16">
+          <slot />
+        </div>
       </div>
-      <div class="skeleton h-12 w-12 flex-none rounded-full" data-theme="light" transition:name="profile"></div>
-      <ThemeController />
-    </div>
-
-    <div class="mt-16">
-      <slot />
+      <div class="drawer-side">
+        <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+        <ul class="menu min-h-full w-80 bg-base-200 p-4">
+          <!-- Sidebar content here -->
+          <li>
+            <a href="/experience">
+              <kbd class="kbd text-base-content">1</kbd>Experience
+            </a>
+          </li>
+          <li>
+            <a href="/projects">
+              <kbd class="kbd text-base-content">2</kbd>Projects
+            </a>
+          </li>
+          <li>
+            <a href="/about">
+              <kbd class="kbd text-base-content">3</kbd>About
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </BaseLayout>
