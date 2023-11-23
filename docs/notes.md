@@ -3,3 +3,4 @@
 - rotate 3d with WASD
 - add a favicon
 - add "my eyes" gif when swtiching to light mode
+- use git lfs
