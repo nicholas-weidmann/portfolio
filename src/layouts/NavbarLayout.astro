@@ -13,46 +13,48 @@ function btnOnPath(path: string) {
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content flex flex-col">
         <!-- Navbar -->
-        <div class="navbar rounded-box bg-base-300 shadow-xl md:mt-8">
-          <div class="flex-none md:hidden">
-            <label for="my-drawer" aria-label="open sidebar" class="btn btn-square btn-ghost">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                class="inline-block h-6 w-6 stroke-current"
-                ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"
-                ></path></svg
+        <div class="md:px-4 md:pt-4">
+          <div class="navbar rounded-box bg-base-300 shadow-xl">
+            <div class="flex-none md:hidden">
+              <label for="my-drawer" aria-label="open sidebar" class="btn btn-square btn-ghost">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  class="inline-block h-6 w-6 stroke-current"
+                  ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"
+                  ></path></svg
+                >
+              </label>
+            </div>
+            <div class="flex flex-1 gap-8">
+              <a class="btn btn-ghost" href="/" transition:name="title">
+                <kbd class="kbd text-base-content">Esc</kbd>Nicholas Weidmann
+              </a>
+              <a
+                class:list={['btn', btnOnPath('/experience'), 'max-md:hidden']}
+                href="/experience"
+                transition:name="btn-experience"
               >
-            </label>
+                <kbd class="kbd text-base-content">1</kbd>Experience
+              </a>
+              <a
+                class:list={['btn', btnOnPath('/projects'), 'max-md:hidden']}
+                href="/projects"
+                transition:name="btn-projects"
+              >
+                <kbd class="kbd text-base-content">2</kbd>Projects
+              </a>
+              <a class:list={['btn', btnOnPath('/about'), 'max-md:hidden']} href="/about" transition:name="btn-about">
+                <kbd class="kbd text-base-content">3</kbd>About
+              </a>
+            </div>
+            <div class="skeleton h-12 w-12 flex-none rounded-full" data-theme="light" transition:name="profile"></div>
+            <ThemeController />
           </div>
-          <div class="flex flex-1 gap-8">
-            <a class="btn btn-ghost" href="/" transition:name="title">
-              <kbd class="kbd text-base-content">Esc</kbd>Nicholas Weidmann
-            </a>
-            <a
-              class:list={['btn', btnOnPath('/experience'), 'max-md:hidden']}
-              href="/experience"
-              transition:name="btn-experience"
-            >
-              <kbd class="kbd text-base-content">1</kbd>Experience
-            </a>
-            <a
-              class:list={['btn', btnOnPath('/projects'), 'max-md:hidden']}
-              href="/projects"
-              transition:name="btn-projects"
-            >
-              <kbd class="kbd text-base-content">2</kbd>Projects
-            </a>
-            <a class:list={['btn', btnOnPath('/about'), 'max-md:hidden']} href="/about" transition:name="btn-about">
-              <kbd class="kbd text-base-content">3</kbd>About
-            </a>
-          </div>
-          <div class="skeleton h-12 w-12 flex-none rounded-full" data-theme="light" transition:name="profile"></div>
-          <ThemeController />
         </div>
         <!-- Page content here -->
-        <div class="md:mt-16">
+        <div class="mt-8">
           <slot />
         </div>
       </div>
