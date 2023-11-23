@@ -3,144 +3,161 @@ import NavbarLayout from '../layouts/NavbarLayout.astro'
 ---
 
 <NavbarLayout title="Nicholas Weidmann">
-  <ul class="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact">
-    <li>
-      <div class="timeline-middle">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"
-          ><path
-            fill-rule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-            clip-rule="evenodd"></path></svg
-        >
-      </div>
-      <div class="timeline-start mb-10 md:text-end">
-        <div class="card card-compact bg-base-200 shadow-xl">
-          <div class="card-body indicator">
-            <span class="badge indicator-item badge-secondary indicator-center indicator-top font-semibold">
-              Jan 2023 - Present
-            </span>
-            <h2 class="card-title">System Engineer @ SIX Group</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end font-semibold">
-              <div class="badge badge-accent">OpenShift</div>
-              <div class="badge badge-primary">Kong API Gateway</div>
-              <div class="badge badge-primary">Mutual TLS</div>
+  <div class="flex justify-center">
+    <ul class="timeline timeline-vertical timeline-snap-icon max-lg:timeline-compact">
+      <li>
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"
+            ><path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd"></path></svg
+          >
+        </div>
+        <div class="timeline-start">
+          <div class="card mb-10 bg-base-200 shadow-xl lg:mb-0">
+            <div class="card-body indicator w-auto min-w-0 max-w-[26rem]">
+              <span
+                class="badge indicator-item badge-secondary badge-outline indicator-center indicator-top font-semibold"
+              >
+                Jan 2023 - Present
+              </span>
+              <h2 class="card-title">System Engineer</h2>
+              <h3 class="link-hover link-info link">@ SIX Group</h3>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end font-semibold">
+                <div class="badge badge-accent">OpenShift</div>
+                <div class="badge badge-primary">Kong API Gateway</div>
+                <div class="badge badge-primary">Mutual TLS</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <hr />
-    </li>
-    <li>
-      <hr />
-      <div class="timeline-middle">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"
-          ><path
-            fill-rule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-            clip-rule="evenodd"></path></svg
-        >
-      </div>
-      <div class="timeline-end mb-10">
-        <div class="card card-compact bg-base-200 shadow-xl">
-          <div class="card-body indicator">
-            <span class="badge indicator-item badge-secondary indicator-center indicator-top font-semibold">
-              May 2021 - Dec 2022
-            </span>
-            <h2 class="card-title">Middleware & IAM Engineer @ Kanton Aargau</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end font-semibold">
-              <div class="badge badge-accent">Kubernetes</div>
-              <div class="badge badge-primary">Httpd</div>
-              <div class="badge badge-primary">F5 BigIP</div>
-              <div class="badge badge-primary">OpenID Connect</div>
-              <div class="badge badge-primary">Elastic Stack</div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"
+            ><path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd"></path></svg
+          >
+        </div>
+        <div class="timeline-end">
+          <div class="card mb-10 bg-base-200 shadow-xl lg:mb-0">
+            <div class="card-body indicator w-auto min-w-0 max-w-[26rem]">
+              <span
+                class="badge indicator-item badge-secondary badge-outline indicator-center indicator-top font-semibold"
+              >
+                May 2021 - Dec 2022
+              </span>
+              <h2 class="card-title">Middleware & IAM Engineer</h2>
+              <h3 class="link-hover link-info link">@ Kanton Aargau</h3>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end font-semibold">
+                <div class="badge badge-accent">Kubernetes</div>
+                <div class="badge badge-primary">Httpd</div>
+                <div class="badge badge-primary">F5 BigIP</div>
+                <div class="badge badge-primary">OpenID Connect</div>
+                <div class="badge badge-primary">Elastic Stack</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <hr />
-    </li>
-    <li>
-      <hr />
-      <div class="timeline-middle">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"
-          ><path
-            fill-rule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-            clip-rule="evenodd"></path></svg
-        >
-      </div>
-      <div class="timeline-start mb-10 md:text-end">
-        <div class="card card-compact bg-base-200 shadow-xl">
-          <div class="card-body indicator">
-            <span class="badge indicator-item badge-secondary indicator-center indicator-top font-semibold">
-              Jan 2019 - May 2019
-            </span>
-            <h2 class="card-title">Radio and Security Specialist @ Swiss Armed Forces</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end font-semibold">
-              <div class="badge badge-primary">Radio operation</div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"
+            ><path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd"></path></svg
+          >
+        </div>
+        <div class="timeline-start">
+          <div class="card mb-10 bg-base-200 shadow-xl lg:mb-0">
+            <div class="card-body indicator w-auto min-w-0 max-w-[26rem]">
+              <span
+                class="badge indicator-item badge-secondary badge-outline indicator-center indicator-top font-semibold"
+              >
+                Jan 2019 - May 2019
+              </span>
+              <h2 class="card-title">Radio and Security Specialist</h2>
+              <h3 class="link-hover link-info link">@ Swiss Armed Forces</h3>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end font-semibold">
+                <div class="badge badge-primary">Radio operation</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <hr />
-    </li>
-    <li>
-      <hr />
-      <div class="timeline-middle">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"
-          ><path
-            fill-rule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-            clip-rule="evenodd"></path></svg
-        >
-      </div>
-      <div class="timeline-end mb-10">
-        <div class="card card-compact bg-base-200 shadow-xl">
-          <div class="card-body indicator">
-            <span class="badge indicator-item badge-secondary indicator-center indicator-top font-semibold">
-              Aug 2018 - Feb 2019
-            </span>
-            <h2 class="card-title">System and Network Engineer @ Siemens</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end font-semibold">
-              <div class="badge badge-accent">PowerShell</div>
-              <div class="badge badge-primary">Hyper-V</div>
-              <div class="badge badge-primary">VPN</div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"
+            ><path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd"></path></svg
+          >
+        </div>
+        <div class="timeline-end">
+          <div class="card mb-10 bg-base-200 shadow-xl lg:mb-0">
+            <div class="card-body indicator w-auto min-w-0 max-w-[26rem]">
+              <span
+                class="badge indicator-item badge-secondary badge-outline indicator-center indicator-top font-semibold"
+              >
+                Aug 2018 - Feb 2019
+              </span>
+              <h2 class="card-title">System and Network Engineer</h2>
+              <h3 class="link-hover link-info link">@ Siemens</h3>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end font-semibold">
+                <div class="badge badge-accent">PowerShell</div>
+                <div class="badge badge-primary">Hyper-V</div>
+                <div class="badge badge-primary">VPN</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <hr />
-    </li>
-    <li>
-      <hr />
-      <div class="timeline-middle">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"
-          ><path
-            fill-rule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-            clip-rule="evenodd"></path></svg
-        >
-      </div>
-      <div class="timeline-start mb-10 md:text-end">
-        <div class="card card-compact bg-base-200 shadow-xl">
-          <div class="card-body indicator">
-            <span class="badge indicator-item badge-secondary indicator-center indicator-top font-semibold">
-              Aug 2014 - Jul 2018
-            </span>
-            <h2 class="card-title">System and Network Engineer Apprenticeship @ Siemens</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end font-semibold">
-              <div class="badge badge-accent">Automation</div>
-              <div class="badge badge-primary">Networking</div>
-              <div class="badge badge-primary">Fortinet firewall</div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"
+            ><path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd"></path></svg
+          >
+        </div>
+        <div class="timeline-start">
+          <div class="card mb-10 bg-base-200 shadow-xl lg:mb-0">
+            <div class="card-body indicator w-auto min-w-0 max-w-[26rem]">
+              <span
+                class="badge indicator-item badge-secondary badge-outline indicator-center indicator-top font-semibold"
+              >
+                Aug 2014 - Jul 2018
+              </span>
+              <h2 class="card-title">System and Network Engineer Apprenticeship</h2>
+              <h3 class="link-hover link-info link">@ Siemens</h3>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end font-semibold">
+                <div class="badge badge-accent">Automation</div>
+                <div class="badge badge-primary">Networking</div>
+                <div class="badge badge-primary">Fortinet firewall</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </li>
-  </ul>
+      </li>
+    </ul>
+  </div>
 </NavbarLayout>
