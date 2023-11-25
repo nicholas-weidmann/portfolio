@@ -11,4 +11,16 @@ export const projects = [
       technology_tags: ['Angular', 'API', 'OpenID Connect'],
     },
   },
+  {
+    params: {
+      project: 'portfolio',
+    },
+    props: {
+      name: 'Portfolio',
+      description: 'My portfolio website',
+      text: 'This is my portfolio website',
+      category_tags: ['Web Design'],
+      technology_tags: ['Astro', 'Tailwind CSS', 'View Transition', 'Open Graph'],
+    },
+  },
 ]

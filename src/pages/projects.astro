@@ -1,27 +1,47 @@
 ---
 import NavbarLayout from '../layouts/NavbarLayout.astro'
+import { projects } from '../data/projects.js'
 ---
 
 <NavbarLayout title="Nicholas Weidmann">
   <div class="flex flex-wrap gap-8 px-2 md:px-8">
-    <a href="/projects/test_client">
-      <div class="card bg-base-200 shadow-xl md:w-96" transition:name="card-test_client">
-        <figure>
-          <img src="/images/test_client.png" alt="Test Client" transition:name="img-test_client" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title" transition:name="title-test_client">
-            Test Client
-            <div class="badge badge-secondary font-semibold" transition:name="group_tag-test_client">game dev</div>
-          </h2>
-          <p transition:name="short_desc-test_client">If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions justify-end font-semibold" transition:name="tech_tags-test_client">
-            <div class="badge badge-accent">Angular</div>
-            <div class="badge badge-primary">API</div>
-            <div class="badge badge-primary">OpenID Connect</div>
-          </div>
-        </div>
-      </div>
-    </a>
+    {
+      projects.map((data) => {
+        const { project } = data.params
+        const { name, description, text, category_tags, technology_tags } = data.props
+        return (
+          <a href={`/projects/${project}`}>
+            <div class="card bg-base-200 shadow-xl md:w-96" transition:name={`card-${project}`}>
+              <figure>
+                <img src={`/images/${project}.png`} alt={name} transition:name={`img-${project}`} />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title" transition:name={`title-${project}`}>
+                  {name}
+                  <div class="font-semibold" transition:name={`category_tags-${project}`}>
+                    {category_tags.map((tag) => (
+                      <div class="badge badge-secondary" transition:name={`category_tag-${project}-${tag}`}>
+                        {tag}
+                      </div>
+                    ))}
+                  </div>
+                </h2>
+                <p transition:name={`short_desc-${project}`}>{description}</p>
+                <div class="card-actions justify-end font-semibold" transition:name={`technology_tags-${project}`}>
+                  {technology_tags.map((tag) => (
+                    <div
+                      class:list={['badge', tag === technology_tags[0] ? 'badge-accent' : 'badge-primary']}
+                      transition:name={`technology_tag-${project}-${tag}`}
+                    >
+                      {tag}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </a>
+        )
+      })
+    }
   </div>
 </NavbarLayout>
