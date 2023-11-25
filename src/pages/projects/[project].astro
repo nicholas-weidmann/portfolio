@@ -18,7 +18,7 @@ const { name, description, text, category_tags, technology_tags } = Astro.props
       </figure>
       <div class="card-body">
         <h1 class="card-title text-4xl" transition:name=`title-${project}`>{name}</h1>
-        <div class="font-semibold" transition:name=`category_tags-${project}`>
+        <div class="card-actions font-semibold" transition:name=`category_tags-${project}`>
           {
             category_tags.map((tag) => (
               <div class="badge badge-secondary" transition:name={`category_tag-${project}-${tag}`}>

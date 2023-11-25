@@ -18,7 +18,7 @@ import { projects } from '../data/projects.js'
               <div class="card-body">
                 <h2 class="card-title" transition:name={`title-${project}`}>
                   {name}
-                  <div class="font-semibold" transition:name={`category_tags-${project}`}>
+                  <div class="card-actions font-semibold" transition:name={`category_tags-${project}`}>
                     {category_tags.map((tag) => (
                       <div class="badge badge-secondary" transition:name={`category_tag-${project}-${tag}`}>
                         {tag}
