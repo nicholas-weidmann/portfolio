@@ -1,4 +1,5 @@
 module.exports = {
+  parserOptions: { sourceType: 'module', ecmaVersion: 2024 },
   extends: ['plugin:astro/recommended', 'plugin:tailwindcss/recommended'],
   overrides: [
     {

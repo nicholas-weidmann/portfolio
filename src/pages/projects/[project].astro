@@ -1,8 +1,9 @@
 ---
 import NavbarLayout from '../../layouts/NavbarLayout.astro'
+import { projects } from '../../data/projects.js'
 
 export function getStaticPaths() {
-  return [{ params: { project: 'test_client' } }]
+  return projects
 }
 
 const { project } = Astro.params
