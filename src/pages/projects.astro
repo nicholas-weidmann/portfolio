@@ -3,9 +3,9 @@ import NavbarLayout from '../layouts/NavbarLayout.astro'
 ---
 
 <NavbarLayout title="Nicholas Weidmann">
-  <div class="flex flex-wrap gap-8 px-8 max-sm:pt-8">
+  <div class="flex flex-wrap gap-8 px-2 md:px-8">
     <a href="/projects/test_client">
-      <div class="card bg-base-200 shadow-xl md:w-96">
+      <div class="card bg-base-200 shadow-xl md:w-96" transition:name="card-test_client">
         <figure>
           <img src="/images/mmocld-test_client.png" alt="mmocld test_client" transition:name="img-test_client" />
         </figure>
