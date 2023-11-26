@@ -11,10 +11,13 @@ const description =
   description={description}
   openGraph={{
     basic: {
-      title: `${title} - ${description}`,
+      title: title,
       type: 'image',
       image: 'https://portfolio.pixceleration.com/images/portfolio.png',
       url: 'https://portfolio.pixceleration.com',
+    },
+    optional: {
+      description: description,
     },
   }}
 />
