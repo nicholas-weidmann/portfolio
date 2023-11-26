@@ -4,6 +4,7 @@ import { SEO } from 'astro-seo'
 const title = 'Nicholas Weidmann - Portfolio'
 const description =
   'System Engineer and hobby Game Developer living in Switzerland, currently working at SIX, Swiss Infrastructure and Exchange.'
+const imageUrl = 'https://portfolio.pixceleration.com/images/portfolio.png'
 ---
 
 <SEO
@@ -13,11 +14,20 @@ const description =
     basic: {
       title: title,
       type: 'image',
-      image: 'https://portfolio.pixceleration.com/images/portfolio.png',
+      image: imageUrl,
       url: 'https://portfolio.pixceleration.com',
     },
     optional: {
       description: description,
     },
+  }}
+  twitter={{
+    title: title,
+    description: description,
+    image: imageUrl,
+    card: 'summary_large_image',
+    creator: '@nicholas-weidmann',
+    site: '@pixceleration',
+    imageAlt: title,
   }}
 />
