@@ -1,13 +1,15 @@
 ---
 import BaseLayout from './BaseLayout.astro'
 import ThemeController from '../components/theme-controller.astro'
+import SEODefaults from '../components/SEO-defaults.astro'
 
 function btnOnPath(path: string) {
   return Astro.url.pathname === path ? 'btn-primary' : 'btn-neutral'
 }
 ---
 
-<BaseLayout title="Nicholas Weidmann">
+<BaseLayout>
+  <slot name="seo" slot="seo"><SEODefaults /></slot>
   <div class="mx-auto min-h-screen max-w-screen-xl">
     <div class="drawer">
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />

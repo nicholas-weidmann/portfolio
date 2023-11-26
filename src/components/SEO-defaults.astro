@@ -1,0 +1,20 @@
+---
+import { SEO } from 'astro-seo'
+
+const title = 'Nicholas Weidmann - Portfolio'
+const description =
+  'System Engineer and hobby Game Developer living in Switzerland, currently working at SIX, Swiss Infrastructure and Exchange.'
+---
+
+<SEO
+  title={title}
+  description={description}
+  openGraph={{
+    basic: {
+      title: `${title} - ${description}`,
+      type: 'image',
+      image: 'https://portfolio.pixceleration.com/images/portfolio.png',
+      url: 'https://portfolio.pixceleration.com',
+    },
+  }}
+/>
