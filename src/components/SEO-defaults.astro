@@ -1,10 +1,19 @@
 ---
 import { SEO } from 'astro-seo'
 
-const title = 'Nicholas Weidmann - Portfolio'
-const description =
-  'System Engineer and hobby Game Developer living in Switzerland, currently working at SIX, Swiss Infrastructure and Exchange.'
-const imageUrl = 'https://portfolio.pixceleration.com/images/portfolio.png'
+interface Props {
+  subtitle?: string
+  descriptionOverride?: string
+  imageOverride?: string
+}
+const { subtitle, descriptionOverride, imageOverride } = Astro.props
+
+const title = 'Nicholas Weidmann - Portfolio' + (subtitle ? ' - ' + subtitle : '')
+const description = descriptionOverride
+  ? descriptionOverride
+  : 'System Engineer and hobby Game Developer living in Switzerland, currently working at SIX, Swiss Infrastructure and Exchange.'
+const baseUrl = 'https://portfolio.pixceleration.com'
+const imageUrl = imageOverride ? baseUrl + imageOverride : baseUrl + '/images/portfolio.png'
 ---
 
 <SEO
@@ -15,7 +24,7 @@ const imageUrl = 'https://portfolio.pixceleration.com/images/portfolio.png'
       title: title,
       type: 'image',
       image: imageUrl,
-      url: 'https://portfolio.pixceleration.com',
+      url: baseUrl,
     },
     optional: {
       description: description,

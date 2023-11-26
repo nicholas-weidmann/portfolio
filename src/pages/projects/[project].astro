@@ -1,6 +1,7 @@
 ---
 import NavbarLayout from '../../layouts/NavbarLayout.astro'
 import { projects } from '../../data/projects.js'
+import SEODefaults from '../../components/SEO-defaults.astro'
 
 export function getStaticPaths() {
   return projects
@@ -11,6 +12,7 @@ const { name, description, text, category_tags, technology_tags } = Astro.props
 ---
 
 <NavbarLayout>
+  <SEODefaults slot="seo" subtitle={name} descriptionOverride={description} imageOverride={`/images/${project}.png`} />
   <div class="flex justify-center px-2 md:px-8">
     <div class="card bg-base-200 shadow-xl" transition:name=`card-${project}`>
       <figure>
