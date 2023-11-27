@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content'
+import NavbarLayout from '../../layouts/NavbarLayout.astro'
+import SEODefaults from '../../components/SEO-defaults.astro'
+import Prose from '../../components/prose.astro'
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog')
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
+}
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
+---
+
+<NavbarLayout>
+  <SEODefaults slot="seo" subtitle={entry.data.title} descriptionOverride={entry.data.description} />
+  <div class="flex justify-center px-8">
+    <Prose>
+      <Content />
+    </Prose>
+  </div>
+</NavbarLayout>

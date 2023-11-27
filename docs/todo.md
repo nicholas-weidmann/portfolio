@@ -1,0 +1,3 @@
+- switch data/projects.js to content
+- add company links to expierience timeline
+  - maybe also to content

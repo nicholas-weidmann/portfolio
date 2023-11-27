@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content'
+import NavbarLayout from '../layouts/NavbarLayout.astro'
+const blogEntries = await getCollection('blog')
+---
+
+<NavbarLayout>
+  <ul class="px-8">
+    {
+      blogEntries.map((entry) => (
+        <li>
+          <a class="link-info link" href={`/blog/${entry.slug}`}>
+            {entry.data.title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</NavbarLayout>
