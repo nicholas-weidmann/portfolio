@@ -4,7 +4,9 @@ import ThemeController from '../components/theme-controller.astro'
 import SEODefaults from '../components/SEO-defaults.astro'
 
 function btnOnPath(path: string) {
-  return Astro.url.pathname === path ? 'btn-primary' : 'btn-neutral'
+  let pathname = Astro.url.pathname
+  if (pathname.slice(-1) === '/') pathname = pathname.slice(0, -1)
+  return pathname === path ? 'btn-primary' : 'btn-neutral'
 }
 ---
 
