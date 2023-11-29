@@ -40,5 +40,15 @@ const imageUrl = imageOverride ? baseUrl + imageOverride : baseUrl + '/images/po
     site: '@pixceleration',
     imageAlt: title,
   }}
-  extend={{ meta: [{ name: 'google-site-verification', content: 'q2ZMQn1LluS1g6hOy5xT1exVydup86NFlU1GMH3LI80' }] }}
+  charset="utf-8"
+  extend={{
+    link: [
+      { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      { rel: 'sitemap', href: '/sitemap-index.xml' },
+    ],
+    meta: [
+      { name: 'viewport', content: 'width=device-width' },
+      { name: 'google-site-verification', content: 'q2ZMQn1LluS1g6hOy5xT1exVydup86NFlU1GMH3LI80' },
+    ],
+  }}
 />
