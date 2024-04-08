@@ -12,10 +12,10 @@
     "lint": "eslint \"src/**/*.{js,astro}\""
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.1",
+    "@astrojs/check": "^0.5.10",
     "@astrojs/sitemap": "^3.0.3",
     "@astrojs/tailwind": "^5.0.2",
-    "astro": "^3.5.5",
+    "astro": "^4.5.16",
     "astro-seo": "^0.8.0",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.3.2"
