@@ -8,7 +8,7 @@ import { projects } from '../data/projects.js'
     {
       projects.map((data) => {
         const { project } = data.params
-        const { name, description, text, category_tags, technology_tags } = data.props
+        const { name, description, category_tags, technology_tags } = data.props
         return (
           <a href={`/projects/${project}`}>
             <div class="card bg-base-200 shadow-xl md:w-96" transition:name={`card-${project}`}>
